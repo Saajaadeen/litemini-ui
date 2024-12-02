@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Features
+🚀 Features
 
 - **Minimalistic Design**: Simple, elegant, and distraction-free interfaces.
 - **Fully Responsive**: Optimized for mobile, tablet, and desktop devices.
@@ -12,9 +12,7 @@
 - **Customizable**: Easy-to-modify layouts to match your project's style.
 - **Open Source**: Completely free and open for contributions.
 
----
-
-## 📂 Included Components
+📂 Included Components
 
 1. **Login Pages**  
    - Clean and secure authentication designs.  
@@ -31,9 +29,7 @@
 4. **Settings Pages**  
    - Functional settings templates for managing user preferences.
 
----
-
-## 🛠️ Installation
+🛠️ Installation
 
 1. Copy and Paste:
    ```bash
