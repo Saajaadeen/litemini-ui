@@ -64,12 +64,9 @@ const LoginForm = () => {
           <Link
             to="/feedback"
             onClick={handleLogin}
-            className="text-xs bg-gray-600 text-white py-2 max-h-8 w-full hover:bg-gray-700 transition-all mt-4 flex justify-center items-center">
-            {loading ? (
-              <SpinningIcon/>
-            ) : (
-              <p>LOGIN</p>
-            )}
+            className={`text-xs bg-gray-600 text-white py-2 max-h-8 w-full mt-4 flex justify-center items-center 
+            ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-700 transition-all"}`}>
+            {loading ? ( <SpinningIcon className="text-white" /> ) : ( <p>LOGIN</p> )}
           </Link>
 
           <div className="flex justify-center items-center">
