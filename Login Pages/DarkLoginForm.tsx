@@ -75,7 +75,7 @@ const LoginForm = () => {
           <Link
             to=""
             onClick={handleLogin}
-            className="text-xs bg-gray-600 text-white py-2 max-h-8 w-full hover:bg-gray-700 mt-4 flex justify-center items-center">
+            className="text-xs bg-gray-600 text-white py-2 max-h-8 w-full hover:bg-gray-700 transition-all mt-4 flex justify-center items-center">
             {loading ? (
               <svg className="w-5 h-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <circle cx="12" cy="12" r="10" strokeWidth="4" className="opacity-25"/>
