@@ -29,6 +29,14 @@
 4. **Settings Pages**  
    - Functional settings templates for managing user preferences.
 
+## Dependencies 📦
+
+This project relies on the following dependencies:
+
+- [Remix](https://remix.run/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [HeroIcons](https://heroicons.com/)
+
 ## 🛠️ Installation
 
 1. Copy and Paste:
