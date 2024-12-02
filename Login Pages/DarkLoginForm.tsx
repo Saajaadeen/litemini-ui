@@ -1,5 +1,6 @@
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { Link, useNavigate } from "@remix-run/react";
+import SpinningIcon from "components/Icons/SpinningIcon";
 import { useState } from "react";
 
 const LoginForm = () => {
@@ -17,7 +18,7 @@ const LoginForm = () => {
     
     setTimeout(() => {
       setLoading(false);
-      navigate('/dashboard');
+      navigate("/login")
     }, 2000);
   };
 
@@ -29,32 +30,20 @@ const LoginForm = () => {
         <form className="w-full max-w-sm space-y-4">
           <h1 className="p-4 mt-2 text-2xl font-light">Network Login</h1>
           <div className="flex flex-col">
-            <input
-              id="username"
-              type="text"
+            <input id="username" type="text" placeholder="Username" value={username}
               className="p-2 w-[350px] text-sm focus:outline-none focus:ring-0 text-white bg-gray-700"
-              placeholder="Username"
-              value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </div>
 
           <div className="flex flex-col relative">
-            <input
-              id="password"
-              type={passwordVisible ? "text" : "password"}
-              className="p-2 w-[350px] text-sm focus:outline-none focus:ring-0 text-white bg-gray-700 pr-12"
-              placeholder="Password"/>
+            <input id="password" type={passwordVisible ? "text" : "password"} placeholder="Password"
+              className="p-2 w-[350px] text-sm focus:outline-none focus:ring-0 text-white bg-gray-700 pr-12"/>
 
             <button
-              type="button"
-              onClick={togglePasswordVisibility}
+              type="button" onClick={togglePasswordVisibility}
               className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
-              {passwordVisible ? (
-                <EyeSlashIcon className="size-5" />
-              ) : (
-                <EyeIcon className="size-5" />
-              )}
+              {passwordVisible ? ( <EyeSlashIcon className="size-5" /> ) : ( <EyeIcon className="size-5" /> )}
             </button>
           </div>
 
@@ -73,16 +62,13 @@ const LoginForm = () => {
           </div>
 
           <Link
-            to=""
+            to="/feedback"
             onClick={handleLogin}
             className="text-xs bg-gray-600 text-white py-2 max-h-8 w-full hover:bg-gray-700 transition-all mt-4 flex justify-center items-center">
             {loading ? (
-              <svg className="w-5 h-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                <circle cx="12" cy="12" r="10" strokeWidth="4" className="opacity-25"/>
-                <path fill="none" strokeWidth="4" d="M4 12a8 8 0 0 1 8-8V4a10 10 0 0 0-10 10h2z" className="opacity-75"/>
-              </svg>
+              <SpinningIcon/>
             ) : (
-              "LOGIN"
+              <p>LOGIN</p>
             )}
           </Link>
 
